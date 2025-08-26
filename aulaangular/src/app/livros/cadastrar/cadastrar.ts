@@ -8,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class Cadastrar {
 
+ mostrarMensagem = true;
+ toggleMensagem() {
+ this.mostrarMensagem = !this.mostrarMensagem;
+ }
+ listaItens = ['Maçã', 'Banana', 'Laranja'];
+
+  isDestaque = true;
+  hasError = false;
+
+  corFundo = 'yellow';
+  tamanhoFonte = '20px';
+
+
+
 }

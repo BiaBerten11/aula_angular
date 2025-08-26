@@ -1,1 +1,18 @@
-<p>cadastrar works!</p>
+<p>Componente de Cadastro de Livros</p>
+
+<h1>Bem-vindo</h1>
+
+<p *ngIf="mostrarMensagem">Esta mensagem é exibida condicionalmente!</p>
+<button (click)="toggleMensagem()">Alternar Mensagem</button>
+
+<ul>
+ <li *ngFor="let item of listaItens">{{ item }}</li>
+</ul>
+
+<div [ngClass]="{'destaque': isDestaque, 'erro': hasError}">
+ Este elemento tem classes dinâmicas.
+</div>
+
+<div [ngStyle]="{'background-color': corFundo, 'font-size': tamanhoFonte}">
+ Este elemento tem estilos dinâmicos.
+</div>

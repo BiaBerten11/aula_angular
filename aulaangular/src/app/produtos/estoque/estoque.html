@@ -1,0 +1,67 @@
+<p>estoque works!</p>
+<div class="centralizacao">
+<h2>Catálogo de Produtos</h2>
+
+<button (click)="aumentarPrecos()">Aumentar preços em 10%</button>
+<button (click)="diminuirPrecos()">Diminuir preços em 10%</button>
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Produto</th>
+      <th>Preço</th>
+      <th>Estoque</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let produto of produtos">
+      <td>{{ produto.nome }}</td>
+
+      <td
+        [ngStyle]="{
+          color: produto.preco > 2000 ? 'blue' : 'black'
+        }"
+      >
+        R$ {{ produto.preco.toFixed(2) }}
+      </td>
+
+      <td>{{ produto.estoque }}</td>
+
+      <td
+        [ngClass]="{
+          'disponivel': produto.estoque > 0,
+          'indisponivel': produto.estoque === 0
+        }"
+      >
+        <span *ngIf="produto.estoque > 0">Disponível</span>
+        <span *ngIf="produto.estoque === 0">Indisponível</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.dev/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button matButton>LIKE</button>
+    <button matButton>SHARE</button>
+  </mat-card-actions>
+</mat-card>
+
+
+</div>
+

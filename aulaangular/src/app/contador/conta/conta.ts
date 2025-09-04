@@ -8,4 +8,24 @@ import { Component } from '@angular/core';
 })
 export class Conta {
 
+    valor = 0
+
+ 
+
+    aumentar(){
+      this.valor = (this.valor + 1)
+    }
+
+    diminuir(){
+      this.valor = (this.valor - 1)
+    }
+
+    zerar(){
+      this.valor = 0
+    }
+
+   
+
+   
+
 }

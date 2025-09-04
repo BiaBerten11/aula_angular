@@ -1,8 +1,11 @@
-.ativo {
-color: blue;
-font-weight: bold;
-}
+.centralizacao {
+    text-align: center;
+    }
+    .ativo {
+      color: blue;
+        font-weight: bold;
+        }
 
-.inativo {
-color: red;
-}
+        .inativo {
+          color: red;
+          }

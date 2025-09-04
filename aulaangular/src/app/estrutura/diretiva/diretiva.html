@@ -1,12 +1,19 @@
-<h2>Lista de Alunos e Status </h2>
+<p>diretiva works!</p>
 
-<button (click)="alternarLista()">Exibir/Ocular Lista</button>
+<div class="centralizacao">
+<button (click)="toggleLista()">
+  {{ mostrarLista ? 'Esconder Lista' : 'Mostrar Lista' }}
+</button>
 
-<ul *ngIf="mostrarLista" [ngStyle]="{'font-size.px':fontSize}">
-    <li *ngFor="let aluno of alunos" [ngClass]="{'ativo': aluno.status, 'inativo': !aluno.status}">
-        {{ aluno.id }} - {{ aluno.nome }} - {{ aluno.status ? 'Ativo' : 'Inativo' }}
-    </li>
+<ul *ngIf="mostrarLista" [ngStyle]="{ 'font-size.px': fontSize }">
+  <li *ngFor="let aluno of alunos"
+      [ngClass]="{ 'ativo': aluno.ativo, 'inativo': !aluno.ativo }">
+    {{ aluno.id }} - {{ aluno.nome }}
+  </li>
 </ul>
 
-<button (click)="aumentarFonte()">+</button>
-<button (click)="diminuieFonte()">-</button>
+<div *ngIf="mostrarLista">
+  <button (click)="aumentarFonte()">+</button>
+  <button (click)="diminuirFonte()">-</button>
+</div>
+</div>

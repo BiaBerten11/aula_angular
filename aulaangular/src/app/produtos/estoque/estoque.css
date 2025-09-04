@@ -1,0 +1,14 @@
+.centralizacao {
+  text-align: center;
+}
+.disponivel {
+  color: green;
+}
+
+.indisponivel {
+  color: red;
+  font-style: italic;
+}
+table {
+  margin: 0 auto;
+}

@@ -1,34 +1,34 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
-selector: 'app-diretiva',
-templateUrl: './diretiva.component.html',
-styleUrls: ['./diretiva.component.css']
+  selector: 'app-diretiva',
+  standalone: true,                
+  imports: [CommonModule],  
+  templateUrl: './diretiva.html',
+  styleUrls: ['./diretiva.css']
 })
-export class DiretivaComponent {
+export class Diretiva {
+  mostrarLista = true;
+  fontSize = 16;
 
-// Lista de alunos
-alunos = [
-{ id: 1, nome: 'Maria', status: true },
-{ id: 2, nome: 'João', status: false },
-{ id: 3, nome: 'Ana', status: true }
-];
+  alunos = [
+    { id: 123, nome: 'Thiago', ativo: true },
+    { id: 238, nome: 'Marcos', ativo: false },
+    { id: 456, nome: 'Leonardo', ativo: true }
+  ];
 
-// Controle para exibir/ocultar a lista
-mostrarLista = true;
+  toggleLista() {
+    this.mostrarLista = !this.mostrarLista;
+  }
 
-// Controle do tamanho da fonte
-fontSize = 16;
+  aumentarFonte() {
+    this.fontSize += 2;
+  }
 
-alternarLista() {
-this.mostrarLista = !this.mostrarLista;
-}
-
-aumentarFonte() {
-this.fontSize += 2;
-}
-
-diminuirFonte() {
-this.fontSize -= 2;
-}
+  diminuirFonte() {
+    if (this.fontSize > 10) {
+      this.fontSize -= 2;
+    }
+  }
 }

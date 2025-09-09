@@ -3,7 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { RouterModule } from '@angular/router'
+import {MatToolbarModule} from '@angular/material/toolbar';import { RouterModule } from '@angular/router'
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,10 @@ import { RouterModule } from '@angular/router'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

@@ -1,1 +1,45 @@
+<mat-toolbar>
+  <button matIconButton class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  <button matIconButton class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button matIconButton class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Cachorro Cururu</mat-card-title>
+    <mat-card-subtitle>Cachorro Sem Pescoço</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://s2-vidadebicho.glbimg.com/Bz8N_e7d3ctrPca9CVC4eowqU9k=/0x0:2048x1536/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_fb623579cd474803aedbbbbae014af68/internal_photos/bs/2022/X/z/TwuBIlTbKuEuKSZ5ErBQ/2-cachorro-cururu-entenda-a-sindrome-que-causa-encurtamento-em-caes.jpeg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+     <button matFab extended>
+        <mat-icon>favorite</mat-icon>
+        Basic
+      </button>
+      <button matFab extended disabled>
+        <mat-icon>favorite</mat-icon>
+        Disabled
+      </button>
+      <a matFab extended routerLink=".">
+        <mat-icon>favorite</mat-icon>
+        Link
+      </a>
+  </mat-card-actions>
+</mat-card>
+
 <router-outlet/>

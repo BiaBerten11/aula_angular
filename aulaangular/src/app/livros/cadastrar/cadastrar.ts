@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './cadastrar.css'
 })
 export class Cadastrar {
+  
 
  mostrarMensagem = true;
  toggleMensagem() {

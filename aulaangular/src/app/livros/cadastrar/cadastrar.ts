@@ -13,6 +13,7 @@ export class Cadastrar {
  toggleMensagem() {
  this.mostrarMensagem = !this.mostrarMensagem;
  }
+
  listaItens = ['Maçã', 'Banana', 'Laranja'];
 
   isDestaque = true;
@@ -20,7 +21,5 @@ export class Cadastrar {
 
   corFundo = 'yellow';
   tamanhoFonte = '20px';
-
-
 
 }

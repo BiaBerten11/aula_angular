@@ -33,7 +33,10 @@ const routes: Routes = [
   path: 'dados',
   loadChildren: () => import('./dados/dados-module').then(m => m.DadosModule)
 },
-
+{
+  path: 'funcionario',
+  loadChildren: () => import('./funcionario/funcionario-module').then(m => m.FuncionarioModule)
+},
 
 
 
